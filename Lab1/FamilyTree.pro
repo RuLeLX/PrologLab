@@ -1,31 +1,19 @@
-parent(tom, liz).
-parent(mary, liz).
+man(voeneg).
+man(ratibor).
+man(boguslav).
+man(velerad).
+man(duhovlad).
+man(svyatoslav).
+man(dobrozhir).
+man(bogomil).
+man(zlatomir).
 
-parent(john, ben).
-parent(janet, ben).
-
-parent(john, jack).
-parent(janet, jack).
-
-parent(ben, tom).
-parent(liz,lom).
-
-parent(ben, tonya).
-parent(liz, tonya).
-
-%Male member of family
-man(tom).
-man(john).
-man(ben).
-man(jack).
-
-woman(mary).
-woman(janet).
-woman(liz).
-woman(tonya).
-
-mother(X, Y):-
-	parent(X, Y), woman(X).
-	
-brother(X, Y):-
-	parent(Z, X), parent(Z, Y), man(X).
+woman(goluba).
+woman(lubomila).
+woman(bratislava).
+woman(veslava).
+woman(zhdana).
+woman(bozhedara).
+woman(broneslava).
+woman(veselina).
+woman(zdislava).
