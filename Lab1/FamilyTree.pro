@@ -68,3 +68,10 @@ b_s(X,Y):- parent(Z,X), parent(Z,Y), ((man(X), woman(Y));(man(Y), woman(X))), pr
 
 
 b_s(X):- b_s(X, Y), print(Y), nl, fail.
+
+
+son(X,Y):- parent(Y,X), man(X).
+son(X):- son(Y, X), print(Y), nl, fail.
+
+sister(X,Y):- woman(X), parent(Z,X), parent(Z,Y), woman(Z), X\==Y.
+sisters(X):- sister(Y, X), print(Y), nl, fail.
