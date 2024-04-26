@@ -54,3 +54,7 @@ parent(zhdana,zlatomir).
 men():- man(X), print(X), nl, fail.
 women():- woman(X), print(X), nl, fail.
 children(X):- parent(X,Y), print(Y), nl, fail.
+
+
+mother(X,Y):- woman(X), parent(X,Y).
+mother(X):- mother(Y,X), print(Y), nl.
