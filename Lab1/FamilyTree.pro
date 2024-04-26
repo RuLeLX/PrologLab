@@ -75,3 +75,9 @@ son(X):- son(Y, X), print(Y), nl, fail.
 
 sister(X,Y):- woman(X), parent(Z,X), parent(Z,Y), woman(Z), X\==Y.
 sisters(X):- sister(Y, X), print(Y), nl, fail.
+
+
+
+
+grand_ma(X,Y):- woman(X), parent(X,Z), parent(Z,Y).
+grand_mas(X):- grand_ma(Y, X), print(Y), nl, fail.
