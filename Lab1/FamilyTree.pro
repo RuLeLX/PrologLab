@@ -65,3 +65,6 @@ brothers(X):- brothers(X, Y), X\==Y, print(Y), nl, fail.
 b_s(X,Y):- parent(Z,X), parent(Z,Y), woman(X), woman(Y), print(sisters).
 b_s(X,Y):- parent(Z,X), parent(Z,Y), man(X), man(Y), print(brothers).
 b_s(X,Y):- parent(Z,X), parent(Z,Y), ((man(X), woman(Y));(man(Y), woman(X))), print(siblings).
+
+
+b_s(X):- b_s(X, Y), print(Y), nl, fail.
