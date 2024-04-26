@@ -83,3 +83,6 @@ grand_ma(X,Y):- woman(X), parent(X,Z), parent(Z,Y).
 grand_mas(X):- grand_ma(Y, X), print(Y), nl, fail.
 
 grand_pa_and_son(X,Y):- man(X), man(Y),(parent(X,Z), parent(Z,Y));(parent(Y,Z), parent(Z,X)).
+
+uncle(X, Y):- man(X), parent(Z,Y), parent(A,Z), parent(A,X), woman(A).
+uncles(X):- uncle(Y,X), print(Y), nl, fail.
