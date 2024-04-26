@@ -81,3 +81,5 @@ sisters(X):- sister(Y, X), print(Y), nl, fail.
 
 grand_ma(X,Y):- woman(X), parent(X,Z), parent(Z,Y).
 grand_mas(X):- grand_ma(Y, X), print(Y), nl, fail.
+
+grand_pa_and_son(X,Y):- man(X), man(Y),(parent(X,Z), parent(Z,Y));(parent(Y,Z), parent(Z,X)).
